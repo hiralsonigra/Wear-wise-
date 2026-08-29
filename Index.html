@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WearWise — Modern Luxury Fashion</title>
+<meta name="description" content="WearWise — quietly bold fashion for women, men, and everyone between. Shop women's, men's, dresses, shoes, bags and accessories.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="WearWise — Modern Luxury Fashion">
+<meta property="og:description" content="Considered pieces for women and men — cut close, priced fair, delivered to your door.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script>
+  document.documentElement.setAttribute("data-theme", localStorage.getItem("wearwiseTheme") || "light");
+</script>
+</head>
+<body>
+
+<!-- ============ PAGE LOADER ============ -->
+<div id="pageLoader" class="page-loader">
+  <div class="loader-mark">WEARWISE</div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#/" class="logo" data-nav="home">WearWise</a>
+
+    <nav>
+      <a href="#/" class="cat-link" data-category="Women">Women</a>
+      <a href="#/" class="cat-link" data-category="Men">Men</a>
+      <a href="#/" class="cat-link" data-category="Dresses">Dresses</a>
+      <a href="#/" class="cat-link" data-category="Shoes">Shoes</a>
+      <a href="#/" class="cat-link" data-category="Bags">Bags</a>
+      <a href="#/" class="cat-link" data-category="Accessories">Accessories</a>
+    </nav>
+
+    <div class="header-icons">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+
+      <button class="icon-btn" id="searchOpenBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+
+      <button class="icon-btn" id="accountBtn" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+      </button>
+
+      <button class="icon-btn" id="wishlistNavBtn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7.5-4.8-10-9.3C0.3 8 1.8 4 6 4c2.2 0 3.8 1.2 6 3.6C14.2 5.2 15.8 4 18 4c4.2 0 5.7 4 4 7.7C19.5 16.2 12 21 12 21z"/></svg>
+        <span class="badge" id="wishlistCount">0</span>
+      </button>
+
+      <button class="icon-btn" id="cartOpenBtn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================================================================
+     VIEW: HOME
+     ================================================================ -->
+<section class="view active" id="view-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Autumn / Winter Edit</p>
+      <h1>Quiet luxury,<br>worn loud.</h1>
+      <p class="hero-sub">Considered pieces for women and men — cut close, priced fair, delivered to your door. No noise, just cloth that holds up.</p>
+
+      <div class="hero-actions">
+        <a href="#new-arrivals" class="primary-btn" data-scroll="new-arrivals">SHOP NEW ARRIVALS</a>
+        <button class="ghost-btn" id="hero360Btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18"/></svg>
+          360° VIEW
+        </button>
+      </div>
+
+      <div class="countdown" aria-label="Drop ends in">
+        <div class="countdown-item"><span id="days">00</span><small>Days</small></div>
+        <div class="countdown-item"><span id="hours">00</span><small>Hrs</small></div>
+        <div class="countdown-item"><span id="minutes">00</span><small>Min</small></div>
+        <div class="countdown-item"><span id="seconds">00</span><small>Sec</small></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="WearWise editorial look" loading="eager">
+      <span class="hero-tag">Cropped Wool Coat<br>₹8,400</span>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>WOMEN · MEN · DRESSES · SHOES · BAGS · ACCESSORIES · </span>
+      <span>WOMEN · MEN · DRESSES · SHOES · BAGS · ACCESSORIES · </span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="section-head">
+      <p class="eyebrow">Shop by Category</p>
+      <h2>Six wardrobes, one point of view.</h2>
+    </div>
+    <div class="category-grid">
+      <article class="category-card" data-category="Women">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80" alt="Women's fashion" loading="lazy">
+        <span>Women</span>
+      </article>
+      <article class="category-card" data-category="Men">
+        <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=600&q=80" alt="Men's fashion" loading="lazy">
+        <span>Men</span>
+      </article>
+      <article class="category-card" data-category="Dresses">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Luxury dresses" loading="lazy">
+        <span>Dresses</span>
+      </article>
+      <article class="category-card" data-category="Shoes">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Premium shoes" loading="lazy">
+        <span>Shoes</span>
+      </article>
+      <article class="category-card" data-category="Bags">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" alt="Designer bags" loading="lazy">
+        <span>Bags</span>
+      </article>
+      <article class="category-card" data-category="Accessories">
+        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=600&q=80" alt="Fashion accessories" loading="lazy">
+        <span>Accessories</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- STYLE FINDER -->
+  <section class="style-banner">
+    <div class="style-banner-text">
+      <p class="eyebrow">2-Minute Quiz</p>
+      <h2>Don't know where to start?</h2>
+      <p>Answer three questions and we'll edit the entire catalog down to what actually suits you.</p>
+      <button class="primary-btn" id="styleFinderBtn">FIND MY STYLE</button>
+    </div>
+    <div class="style-banner-visual">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80" alt="Style finder" loading="lazy">
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop" id="new-arrivals">
+    <div class="section-head">
+      <p class="eyebrow">The Full Edit</p>
+      <h2 id="shopHeading">New Arrivals</h2>
+    </div>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search products…" autocomplete="off">
+      <div class="filter-range">
+        <label for="priceRange">Max price <span id="priceValue">₹10,000</span></label>
+        <input type="range" id="priceRange" min="1500" max="10000" step="250" value="10000">
+      </div>
+      <select id="sortSelect">
+        <option value="featured">Sort: Featured</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+        <option value="newest">Newest</option>
+      </select>
+      <button class="ghost-btn" id="resetFilters">RESET</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+    <button class="secondary-btn" id="loadMoreBtn">LOAD MORE</button>
+  </section>
+
+  <!-- 360 DIMENSION VIEWER -->
+  <section class="dimension">
+    <div class="dimension-text">
+      <p class="eyebrow">See It From Every Angle</p>
+      <h2>Fit, fabric, and finish — before it ships.</h2>
+      <p>Every WearWise piece is scanned in-studio. Rotate it right here, or open the full 360° viewer for a closer look.</p>
+      <button class="primary-btn" id="dimension360Btn">OPEN FULL VIEWER</button>
+    </div>
+    <div class="dimension-viewer">
+      <img id="viewerImage" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=90" alt="360 product view">
+      <div class="viewer-controls">
+        <button id="rotateLeft" aria-label="Rotate left">‹</button>
+        <button id="rotateRight" aria-label="Rotate right">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust-strip">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/></svg>
+      <span>Secure Payments</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h13v9H3zM16 10h3l2 3v3h-5z"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="17.5" cy="18" r="1.5"/></svg>
+      <span>Free Shipping Over ₹4,999</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M4.5 15a8 8 0 0 0 14.4 3M19.5 9A8 8 0 0 0 5.1 6"/></svg>
+      <span>Easy 14-Day Returns</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+      <span>Verified Reviews</span>
+    </div>
+  </section>
+
+  <!-- RECENTLY VIEWED (home) -->
+  <section class="shop" id="recentlyViewedSection" style="display:none;">
+    <div class="section-head">
+      <p class="eyebrow">Pick Up Where You Left Off</p>
+      <h2>Recently Viewed</h2>
+    </div>
+    <div class="product-grid" id="recentlyViewedGrid"></div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <p class="eyebrow">Stay in the loop</p>
+    <h2>Join the WearWise world.</h2>
+    <p>Early access to drops, restocks, and the occasional 10% off code.</p>
+    <form id="newsletterForm">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="primary-btn">SUBSCRIBE</button>
+    </form>
+  </section>
+
+</section>
+<!-- /view-home -->
+
+<!-- ================================================================
+     VIEW: PRODUCT DETAIL
+     ================================================================ -->
+<section class="view" id="view-product">
+  <div class="breadcrumb" id="breadcrumb"></div>
+
+  <div class="product-detail" id="productDetail"></div>
+
+  <section class="reviews" id="reviews">
+    <div class="section-head">
+      <p class="eyebrow">From People Who Bought It</p>
+      <h2>Reviews</h2>
+    </div>
+    <div class="reviews-list" id="reviewsList"></div>
+
+    <form class="review-form" id="reviewForm">
+      <h3>Write a review</h3>
+      <label>Your name<input type="text" id="reviewName" required></label>
+      <label>Rating
+        <select id="reviewRating">
+          <option value="5">★★★★★ — 5</option>
+          <option value="4">★★★★☆ — 4</option>
+          <option value="3">★★★☆☆ — 3</option>
+        </select>
+      </label>
+      <label>Review<textarea id="reviewText" rows="3" required></textarea></label>
+      <button type="submit" class="secondary-btn">SUBMIT REVIEW</button>
+    </form>
+  </section>
+
+  <section class="shop" id="relatedSection">
+    <div class="section-head">
+      <p class="eyebrow">You Might Also Like</p>
+      <h2>Related Products</h2>
+    </div>
+    <div class="product-grid" id="relatedGrid"></div>
+  </section>
+
+  <section class="shop" id="recentlyViewedSectionProduct" style="display:none;">
+    <div class="section-head">
+      <p class="eyebrow">Pick Up Where You Left Off</p>
+      <h2>Recently Viewed</h2>
+    </div>
+    <div class="product-grid" id="recentlyViewedGridProduct"></div>
+  </section>
+</section>
+<!-- /view-product -->
+
+<!-- ================================================================
+     VIEW: POLICIES / HELP
+     ================================================================ -->
+<section class="view" id="view-policies">
+  <div class="breadcrumb"><a href="#/" data-nav="home">Home</a> / <span>Help</span></div>
+
+  <section class="policy-section" id="shipping">
+    <p class="eyebrow">Delivery</p>
+    <h2>Shipping &amp; Returns</h2>
+    <div class="policy-grid">
+      <div>
+        <h3>Shipping</h3>
+        <p>Orders ship within 1–2 business days. Standard delivery takes 3–6 business days across India; metro pincodes often see next-day delivery. Shipping is free on orders over ₹4,999 — a flat ₹149 applies below that.</p>
+      </div>
+      <div>
+        <h3>Returns</h3>
+        <p>Not the right fit? You have 14 days from delivery to send it back for a full refund, provided tags are intact and the item is unworn. Refunds are issued to the original payment method within 5–7 business days of us receiving the return.</p>
+      </div>
+      <div>
+        <h3>Exchanges</h3>
+        <p>Need a different size or color? Start a return and place a new order — this is the fastest way to get the right piece to you without waiting on inventory holds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="size-guide">
+    <p class="eyebrow">Fit</p>
+    <h2>Size Guide</h2>
+    <div class="size-table-wrap">
+      <table class="size-table">
+        <thead><tr><th>Size</th><th>Bust (cm)</th><th>Waist (cm)</th><th>Hip (cm)</th></tr></thead>
+        <tbody>
+          <tr><td>XS</td><td>78–81</td><td>60–63</td><td>85–88</td></tr>
+          <tr><td>S</td><td>82–85</td><td>64–67</td><td>89–92</td></tr>
+          <tr><td>M</td><td>86–90</td><td>68–72</td><td>93–97</td></tr>
+          <tr><td>L</td><td>91–96</td><td>73–78</td><td>98–103</td></tr>
+          <tr><td>XL</td><td>97–103</td><td>79–85</td><td>104–110</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="size-note">Measurements are body measurements, not garment measurements. Between sizes? We recommend sizing up.</p>
+  </section>
+
+  <section class="policy-section" id="about">
+    <p class="eyebrow">Who We Are</p>
+    <h2>About WearWise</h2>
+    <p class="policy-copy">WearWise is a considered, editorial-driven storefront — clean fits, honest pricing, and a shopping experience that doesn't shout for attention. We work with a small number of mills and workshops to keep quality consistent and production accountable.</p>
+  </section>
+
+  <section class="policy-section" id="contact">
+    <p class="eyebrow">Get In Touch</p>
+    <h2>Contact</h2>
+    <div class="policy-grid">
+      <div>
+        <h3>Customer Care</h3>
+        <p>Email <a class="text-link" href="mailto:hello@wearwise.example">hello@wearwise.example</a> and we'll get back within 24 hours on business days.</p>
+      </div>
+      <div>
+        <h3>Order Support</h3>
+        <p>Already placed an order? <a class="text-link" href="#/orders" data-nav="orders">Track it here</a> using your order number.</p>
+      </div>
+    </div>
+  </section>
+</section>
+<!-- /view-policies -->
+
+<!-- ================================================================
+     VIEW: ORDER HISTORY
+     ================================================================ -->
+<section class="view" id="view-orders">
+  <div class="breadcrumb"><a href="#/" data-nav="home">Home</a> / <span>Order History</span></div>
+
+  <section class="orders-wrap">
+    <div class="section-head" style="margin-bottom:2rem;">
+      <p class="eyebrow">Your Account</p>
+      <h2>Order History</h2>
+    </div>
+    <div id="ordersList"></div>
+  </section>
+</section>
+<!-- /view-orders -->
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <p class="logo">WearWise</p>
+      <p>Considered fashion, made to last longer than the trend cycle.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#/" class="cat-link" data-category="Women">Women</a>
+      <a href="#/" class="cat-link" data-category="Men">Men</a>
+      <a href="#/" class="cat-link" data-category="Bags">Bags</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#/policies" data-nav="policies" data-anchor="shipping">Shipping &amp; Returns</a>
+      <a href="#/policies" data-nav="policies" data-anchor="size-guide">Size Guide</a>
+      <a href="#/policies" data-nav="policies" data-anchor="contact">Contact</a>
+      <a href="#/orders" data-nav="orders">Track My Order</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#/policies" data-nav="policies" data-anchor="about">About</a>
+      <a href="#/policies" data-nav="policies" data-anchor="about">Sustainability</a>
+      <a href="#/policies" data-nav="policies" data-anchor="contact">Careers</a>
+    </div>
+  </div>
+  <p class="footer-note">© 2026 WearWise. All rights reserved. Demo storefront — no real orders are processed.</p>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="drawer-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>Your Bag</h3>
+    <button class="icon-btn" id="cartCloseBtn" aria-label="Close cart">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-coupon">
+    <input type="text" id="couponInput" placeholder="Coupon code (try WW10)">
+    <button class="secondary-btn" id="applyCoupon">APPLY</button>
+  </div>
+  <div class="cart-summary">
+    <div class="summary-row"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+    <div class="summary-row"><span>Discount</span><span id="cartDiscount">₹0</span></div>
+    <div class="summary-row total"><span>Total</span><span id="cartTotal">₹0</span></div>
+  </div>
+  <button class="primary-btn full" id="checkoutBtn">CHECKOUT</button>
+</aside>
+
+<!-- ============ QUICK VIEW MODAL ============ -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal-box">
+    <button class="modal-close" data-close-product aria-label="Close">×</button>
+    <div id="quickViewContent"></div>
+  </div>
+</div>
+
+<!-- ============ SEARCH MODAL ============ -->
+<div class="modal-overlay" id="searchOverlay">
+  <div class="modal-box search-box">
+    <button class="modal-close" data-close-search aria-label="Close">×</button>
+    <input type="text" id="searchInputModal" placeholder="Search for anything…" autocomplete="off">
+    <div id="searchSuggestions" class="search-suggestions"></div>
+  </div>
+</div>
+
+<!-- ============ STYLE FINDER MODAL ============ -->
+<div class="modal-overlay" id="styleModalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" data-close-style aria-label="Close">×</button>
+    <div id="styleFinderContent"></div>
+  </div>
+</div>
+
+  <!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal-box">
+    <button class="modal-close" data-close-checkout aria-label="Close">×</button>
+    <h2>Checkout</h2>
+    <ul id="checkoutErrors" class="form-errors"></ul>
+    <form id="checkoutForm" class="checkout-form">
+      <label>Full name<input type="text" required></label>
+      <label>Email<input type="email" id="checkoutEmail" required></label>
+      <label>Shipping address<input type="text" required></label>
+      <div class="form-row">
+        <label>City<input type="text" required></label>
+        <label>PIN code<input type="text" id="pinCode" maxlength="6" inputmode="numeric" placeholder="6-digit PIN" required></label>
+      </div>
+      <label>Payment method</label>
+      <div class="payment-options">
+        <label class="radio-pill"><input type="radio" name="paymentMethod" value="card" checked> Card</label>
+        <label class="radio-pill"><input type="radio" name="paymentMethod" value="upi"> UPI</label>
+        <label class="radio-pill"><input type="radio" name="paymentMethod" value="cod"> Cash on Delivery</label>
+      </div>
+      <label>Card number<input type="text" id="cardNumber" inputmode="numeric" placeholder="•••• •••• •••• ••••" maxlength="19" required></label>
+      <div class="form-row">
+        <label>Expiry<input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" required></label>
+        <label>CVV<input type="text" id="cardCvv" inputmode="numeric" placeholder="•••" maxlength="4" required></label>
+      </div>
+      <p class="demo-note">Demo checkout — no real payment is processed. To go live, connect a gateway like Razorpay or Stripe on the server side.</p>
+      <button type="submit" class="primary-btn full">PLACE ORDER</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ SUCCESS MODAL ============ -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box success-box">
+    <button class="modal-close" data-close-success aria-label="Close">×</button>
+    <div class="success-mark">✓</div>
+    <h2>Order confirmed</h2>
+    <p>Your order number is</p>
+    <p class="order-number">WW-000000</p>
+    <p>We've sent a confirmation to your email. Thank you for shopping with WearWise.</p>
+  </div>
+</div>
+
+<!-- ============ ACCOUNT MODAL ============ -->
+<div class="modal-overlay" id="accountModal">
+  <div class="modal-box">
+    <button class="modal-close" data-close-account aria-label="Close">×</button>
+    <h2>Sign in to WearWise</h2>
+    <form id="loginForm" class="checkout-form">
+      <label>Email<input type="email" required></label>
+      <label>Password<input type="password" required></label>
+      <button type="submit" class="primary-btn full">SIGN IN</button>
+    </form>
+    <a class="text-link" href="#/orders" data-nav="orders">View order history →</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
