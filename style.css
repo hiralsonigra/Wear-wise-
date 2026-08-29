@@ -1,3 +1,5 @@
+Content is user-generated and unverified.
+Learn about artifacts
 /* ============================================================
    WEARWISE — Design tokens
    ============================================================ */
@@ -474,4 +476,4 @@ nav a:hover{color:var(--ink);border-color:var(--brass);}
   .footer-grid{grid-template-columns:1fr;}
   .cart-drawer{width:100vw;}
   .trust-strip{grid-template-columns:repeat(2,1fr);}
-  }
+}
